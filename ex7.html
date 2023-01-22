@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>exercice7</title>
+<meta charset='utf-8'>
+</head>
+<body>
+<h1> exercice7</h1>
+<script>
+function member(id,name,grade){
+    this.id=id;
+    this.name=name;
+    this.grade=grade;
+    this.toString=function(){
+        return "LID :"+this.id+"Le name :"+this.name+"Le Grade :"+this.grade;
+    }
+}
+function team(){
+    this.members=new Array();
+    this.add= function(member){
+        var i=this.members.length;
+        this.members[i]=member;
+        return i;
+
+    }
+    this.toString=function(){
+        return this.members.join("\n");
+    }
+}
+var TEAM =new team();
+TEAM.add(new member(1,"hatem","A"));
+TEAM.add(new member(2,"yassin","B"));
+TEAM.add(new member(3,"mouhamed","C"));
+alert(TEAM);
+
+</script>
+</body>
+</html>
